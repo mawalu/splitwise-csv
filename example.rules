@@ -1,0 +1,14 @@
+fields splitwise_id, date, paid, net_balance, description
+
+currency EUR
+
+account1 liabilities:splitwise
+amount1 %net_balance
+
+account2 expenses:splitwise_unmatched
+
+if %paid [1-9]
+   account3 assets:accounts:checking
+   amount3 -%paid
+
+include general.rules
