@@ -11,7 +11,9 @@ A small script to export [Splitwise](https://www.splitwise.com/) transaction as 
 $ curl -s -H "Authorization: Bearer $SPLITWISE_KEY" https://secure.splitwise.com/api/v3.0/get_current_user | jq ".user.id"
 ```
 * Update `splitwise.sh` to include your key and user id or set the `SPLITWISE_USER` and `SPLITWISE_KEY` environment variables.
-* Run the script to get the CSV export. If you use hledger you can use the `example.rules` files to get some inspiration for your import rules.
+* Run the script to get the CSV export.
+
+If you use hledger you can use the `example.rules` files to get some inspiration for your import rules.
 
 ## License
 
